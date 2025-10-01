@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Myths and Cognitive Psychology</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 50px;
+      color: #333;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 50px 60px;  /* row gap = 50px, column gap = 60px */
+      max-width: 1400px;
+      margin-bottom: 60px;
+    }
+    .instructions {
+      font-size: 18px;
+      color: #555;
+      margin-top: -30px;   /* pull it closer to the title */
+      margin-bottom: 40px; /* space before the grid */
+      font-style: italic;
+    }
+    .card {
+      perspective: 1000px;
+      cursor: pointer;
+      height: 320px;
+    }
+    .inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.8s;
+      border-radius: 12px;
+    }
+    .card.flipped .inner {
+      transform: rotateY(180deg);
+    }
+    .front, .back {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      backface-visibility: hidden;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.18);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+    .front {
+      background: #ffffff;
+      color: #333;
+    }
+    .front img {
+      max-height: 120px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+    }
+    .back {
+      background: #4a90e2;
+      color: white;
+      transform: rotateY(180deg);
+    }
+
+    .citations {
+      margin-top: 50px;
+      padding: 20px;
+      line-height: 1.6;
+      list-style-type: none;
+      text-align: left;
+    }
+
+
+.citations li {
+  margin-bottom: 15px;
+}
+
+    }
+  </style>
+</head>
+<body>
+  <h1>Learning Myths</h1>
+  <p class="instructions">Below are some popular statements that we often see online on learning. Click on each card to see if it's true or not.</p>
+  <div class="grid">
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="inner">
+        <div class="front">
+          <img src="images/learning.jpg" alt="Learning Styles">
+          <p>People learn best when taught in their preferred learning style.</p>
+        </div>
+        <div class="back">
+          <b>False.</b> Research shows no evidence that tailoring teaching to learning styles improves outcomes (Dunlosky et al., 2013). 
+        </div>
+      </div>
+    </div>
+
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="inner">
+        <div class="front">
+          <img src="images/notes.jpg" alt="Mozart Effect">
+          <p>Re-reading your notes is the best way to study.</p>
+        </div>
+        <div class="back">
+          <b>False.</b> Retrieval practice and testing yourself are far more effective for long-term learning (Roediger & Butler, 2011)
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="inner">
+        <div class="front">
+          <img src="images/ten_percent.jpg" alt="10% brain">
+          <p>We only use 10% of our brain while learning.</p>
+        </div>
+        <div class="back">
+          <b>False.</b> All areas are active at different times during daily activities (Veerakone, 2024).
+        </div>
+      </div>
+    </div>
+
+   <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="inner">
+        <div class="front">
+          <img src="images/praise.jpg" alt="restudy">
+          <p>Teachers should motivate students by praising them "for being smart." </p>
+        </div>
+        <div class="back">
+          <b>False.</b> This kind of praise is countereffective (Mueller & Dweck, 1998). Praising effort, rather than ability, is far more likely to motivate students to work hard and improve.
+        </div>
+      </div>
+    </div>
+
+  <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="inner">
+        <div class="front">
+          <img src="images/fields.jpg" alt="restudy">
+          <p>Teachers don't need to know a subject area such as math or science, as long as they have good instructional skills. </p>
+        </div>
+        <div class="back">
+          <b>False.</b> Research shows that expertise in a subject is a key element in helping students learn better (Monk, 1994).
+        </div>
+      </div>
+    </div>
+
+  <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="inner">
+        <div class="front">
+          <img src="images/intelligence.jpg" alt="restudy">
+          <p>Intelligence is fixed at birth.</p>
+        </div>
+        <div class="back">
+          <b>False.</b> Intelligence doesn't solely depend on genetics (Bartels et al., 2002). Abilities can change through learning and practice.
+        </div>
+      </div>
+    </div>
+
+  <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="inner">
+        <div class="front">
+          <img src="images/environment.jpg" alt="restudy">
+          <p>Studying at the same place as you take the test could make you do better on the test.</p>
+        </div>
+        <div class="back">
+          <b>True.</b> Being in similar environments will help you retrieve better (Golden & Baddeley, 1975).
+        </div>
+      </div>
+    </div>
+
+  <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="inner">
+        <div class="front">
+          <img src="images/music.jpg" alt="restudy">
+          <p>Listening to music while studying sometimes harms your efficiency.</p>
+        </div>
+        <div class="back">
+          <b>True.</b> There has been mixed literature on the effect of listening to music during studying. Listening to music while studying sometimes harms, especially for more difficult tasks (Ferreri & Verga, 2016)
+        </div>
+      </div>
+    </div>
+
+
+  <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="inner">
+        <div class="front">
+          <img src="images/cramming.jpg" alt="restudy">
+          <p>Cramming works well if you put in enough hours.</p>
+        </div>
+        <div class="back">
+          <b>False.</b> Spaced practice is much more effective for long-term retention than cramming (Bahrick et al., 1993).
+        </div>
+      </div>
+    </div>
+
+ 
+
+
+  </div>
+
+  <!-- Citations Section -->
+<section class="citations">
+  <h2>Citations</h2>
+  <p>Here are the references for the myths and explanations above:</p>
+  <ol>
+    <li>
+      Bahrick, H. P., Bahrick, L. E., Bahrick, A. S., & Bahrick, P. E. (1993). 
+      Maintenance of Foreign Language Vocabulary and the Spacing Effect. 
+      <i>Psychological Science.</i> 
+      <a href="https://journals.sagepub.com/doi/full/10.1111/j.1467-9280.1993.tb00571.x" target="_blank">
+        https://journals.sagepub.com/doi/full/10.1111/j.1467-9280.1993.tb00571.x
+      </a>
+    </li>
+    <li>
+      Bartels, M., Rietveld, M. J. H., Van Baal, G. C. M., & Boomsma, D. I. (2002). 
+      Genetic and Environmental Influences on the Development of Intelligence. 
+      <i>Behavior Genetics, 32</i>(4), 237–249. 
+      <a href="https://doi.org/10.1023/A:1019772628912" target="_blank">
+        https://doi.org/10.1023/A:1019772628912
+      </a>
+    </li>
+    <li>
+      Dunlosky, J., Rawson, K. A., Marsh, E. J., Nathan, M. J., & Willingham, D. T. (2013). 
+      Improving Students’ Learning With Effective Learning Techniques: Promising Directions From Cognitive and Educational Psychology. 
+      <i>Psychological Science in the Public Interest, 14</i>(1), 4–58. 
+      <a href="https://doi.org/10.1177/1529100612453266" target="_blank">
+        https://doi.org/10.1177/1529100612453266
+      </a>
+    </li>
+    <li>
+      Ferreri, L., & Verga, L. (2016). Benefits of Music on Verbal Learning and Memory: How and When Does It Work? 
+      <i>Music Perception, 34</i>(2), 167–182. 
+      <a href="https://doi.org/10.1525/mp.2016.34.2.167" target="_blank">
+        https://doi.org/10.1525/mp.2016.34.2.167
+      </a>
+    </li>
+    <li>
+      Godden, D. R., & Baddeley, A. D. (1975). Context-dependent memory in two natural environments: On land and underwater. 
+      <i>British Journal of Psychology, 66</i>(3), 325–331. 
+      <a href="https://doi.org/10.1111/j.2044-8295.1975.tb01468.x" target="_blank">
+        https://doi.org/10.1111/j.2044-8295.1975.tb01468.x
+      </a>
+    </li>
+    <li>
+      Monk, D. H. (1994). Subject area preparation of secondary mathematics and science teachers and student achievement. 
+      <i>Economics of Education Review, 13</i>(2), 125–145. 
+      <a href="https://doi.org/10.1016/0272-7757(94)90003-5" target="_blank">
+        https://doi.org/10.1016/0272-7757(94)90003-5
+      </a>
+    </li>
+    <li>
+      Mueller, C. M., & Dweck, C. S. (1998). Praise for intelligence can undermine children’s motivation and performance. 
+      <i>Journal of Personality and Social Psychology, 75</i>(1), 33–52. 
+      <a href="https://doi.org/10.1037//0022-3514.75.1.33" target="_blank">
+        https://doi.org/10.1037//0022-3514.75.1.33
+      </a>
+    </li>
+    <li>
+      Roediger, H. L., & Butler, A. C. (2011). The critical role of retrieval practice in long-term retention. 
+      <i>Trends in Cognitive Sciences, 15</i>(1), 20–27. 
+      <a href="https://doi.org/10.1016/j.tics.2010.09.003" target="_blank">
+        https://doi.org/10.1016/j.tics.2010.09.003
+      </a>
+    </li>
+    <li>
+      Veerakone, R. (2024, January 26). Do we only use 10 percent of our brain? 
+      MIT McGovern Institute. 
+      <a href="https://mcgovern.mit.edu/2024/01/26/do-we-use-only-10-percent-of-our-brain/" target="_blank">
+        https://mcgovern.mit.edu/2024/01/26/do-we-use-only-10-percent-of-our-brain/
+      </a>
+    </li>
+  </ol>
+</section>
+
+
+</body>
+</html>
+
